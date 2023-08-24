@@ -11,6 +11,7 @@ const Routes = () => {
             element: <DashboardLayout />,
             children: [
                 { path: '', element: <Dashboard /> },
+                { path: '/todo', element: <Todo /> }
             ]
         },
         { path: '/404', element: <NotFound /> },
