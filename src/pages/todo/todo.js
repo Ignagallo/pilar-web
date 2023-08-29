@@ -19,6 +19,7 @@ import {
     Typography,
     delTask
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 const Todo = () => {
@@ -59,16 +60,16 @@ const Todo = () => {
         <Grid container spacing={3}>
             <Grid item xs={12}>
                 <Paper sx={{ p: 2 }}>
-                    <Box sx={{fontWeight:"bold", marginBottom:"5px", fontSize:"1.5em", padding:"10px", borderRadius:"5px", /*border: "1px solid black" ,*/textAlign: "center", backgroundColor: "yellow", boxShadow:"0px 0px 5px 0.1px rgba(0,0,0,0.49)" }}>
+                    <Box sx={{ fontWeight: "bold", marginBottom: "5px", fontSize: "1.5em", padding: "10px", borderRadius: "5px", /*border: "1px solid black" ,*/textAlign: "center", backgroundColor: "yellow", boxShadow: "0px 0px 5px 0.1px rgba(0,0,0,0.49)" }}>
                         To Do
                     </Box>
 
                     <Card>
-                        <CardHeader sx={{color: "rgba(0,0,0,1)", marginBottom:"-1.2em"}} title="Agrega una tarea" />
+                        <CardHeader sx={{ color: "rgba(0,0,0,1)", marginBottom: "-1.2em" }} title="Agrega una tarea" />
                         <CardContent>
                             <Stack sx={{ justifyContent: 'space-around' }} direction='row'>
                                 <Grid item md={10}>
-                                    <TextField sx={{width:"75%"}} value={text} label="Tarea" variant="outlined"
+                                    <TextField sx={{ width: "75%" }} value={text} label="Tarea" variant="outlined"
                                         onChange={handleChange} />
                                 </Grid>
                                 <Grid item md={4}>
@@ -80,11 +81,11 @@ const Todo = () => {
                     </Card>
                     <br></br>
                     <Card>
-                        <CardHeader sx={{color: "yellow", borderRadius:"5px" ,backgroundColor:"rgba(0,0,0,0.85)", margin:"5px"}} title="Tareas" />
+                        <CardHeader sx={{ color: "yellow", borderRadius: "5px", backgroundColor: "rgba(0,0,0,0.85)", margin: "5px" }} title="Tareas" />
                         <CardContent>
                             {todo.map((t, index) =>
                             (
-                                <Stack key={t.id} sx={{color:"black", paddingTop:"5px" , justifyContent: 'space-between' }}
+                                <Stack key={t.id} sx={{ color: "black", paddingTop: "5px", justifyContent: 'space-between' }}
                                     direction='row'>
                                     <Grid item md={1}>
                                         <Checkbox checked={t.completed} onChange={e => handleChecked(e, t.id)} />
@@ -107,8 +108,8 @@ const Todo = () => {
                 </Paper>
                 <Box>
                     <Stack spacing={2} direction="row" sx={{ marginTop: 1 }}>
-                        <Button /*onClick={redirectToTodo}*/ variant="contained" sx={{ backgroundColor: 'yellow', color: "black" }}><ChecklistIcon /><span style={{ marginLeft: '16px' }}></span>To Do</Button>
-                        <Button /*onClick={redirectToFetchList} */ variant="contained" sx={{ backgroundColor: 'yellow', color: "black" }}><ManageSearchIcon /><span style={{ marginLeft: '16px' }}></span>Fetch List</Button>
+                        <Link to="/" style={{ textDecoration: 'none' }}><Button variant="contained" sx={{ backgroundColor: 'yellow', color: "black" }}><ChecklistIcon /><span style={{ marginLeft: '16px' }}></span>Dashboard</Button></Link>
+                        <Link to="/fetch-list" style={{ textDecoration: 'none' }}><Button variant="contained" sx={{ backgroundColor: 'yellow', color: "black" }}><ManageSearchIcon /><span style={{ marginLeft: '16px' }}></span>Fetch List</Button></Link>
                     </Stack>
                 </Box>
             </Grid>
