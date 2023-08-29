@@ -5,7 +5,7 @@ import NotFoundImg from '../../assets/images/404.jpg';
 const NotFound = () => {
     return (
         <>
-            <img src={NotFoundImg} />
+            <img style={{width:"100vw"}} src={NotFoundImg} />
         </>
     )
 }
