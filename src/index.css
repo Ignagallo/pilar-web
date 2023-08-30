@@ -16,21 +16,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.pendiente,
-.realizada {
-  justify-content: center;
-  text-align: center;
-}
-
-.pendiente:hover,
-.realizada:hover {
-  background-color: rgba(0, 0, 0, 0.0);
-  color: yellow;
-  transition: .5s;
-}
-
-.cuadro-tarea-1, .cuadro-tarea-2 {
-  display: inline-block;
-  margin-top: -20px;
-}

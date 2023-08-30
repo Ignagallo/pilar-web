@@ -19,9 +19,6 @@ import {
     Typography,
     delTask
 } from '@mui/material';
-import { Link } from 'react-router-dom';
-import { AddTask, Dashboard } from '@mui/icons-material';
-
 
 
 const Todo = () => {
@@ -62,8 +59,8 @@ const Todo = () => {
                         <CardHeader sx={{ color: "rgba(0,0,0,1)", marginBottom: "-1.2em" }} title="Agrega una tarea" />
                         <CardContent>
                             <Stack sx={{ justifyContent: 'space-around' }} direction='row'>
-                                <Grid item sm={8}>
-                                    <TextField sx={{ width: "80%", }} value={text} label="Tarea" variant="outlined"
+                                <Grid item md={10}>
+                                    <TextField sx={{width:"75%"}} value={text} label="Tarea" variant="outlined"
                                         onChange={handleChange} />
                                 </Grid>
                                 <Grid item md={4}>
@@ -75,7 +72,7 @@ const Todo = () => {
                     </Card>
                     <br></br>
                     <Card>
-                        <CardHeader sx={{ color: "yellow", borderRadius: "5px", backgroundColor: "rgba(0,0,0,0.85)", margin: "-5px" }} title="Tareas" />
+                        <CardHeader sx={{color: "yellow", borderRadius:"5px" ,backgroundColor:"rgba(0,0,0,0.85)", margin:"5px"}} title="Tareas" />
                         <CardContent>
                             {todo.map((t, index) =>
                             (
