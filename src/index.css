@@ -16,3 +16,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.cuadro-tarea-1, .cuadro-tarea-2 {
+  display: inline-block;
+}

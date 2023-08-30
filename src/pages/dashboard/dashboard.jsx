@@ -17,7 +17,6 @@ import {
     CardContent,
     Typography
 } from '@mui/material';
-import Todo from "../todo/todo";
 
 const Dashboard = () => {
     const tasks = useSelector(appSelector.todo);
