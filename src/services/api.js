@@ -1,7 +1,11 @@
+import axios from "axios";
+import {BASE_URL } from '../constants/index' ;
+
 const headers = () => {
     const headers = {
         headers: {
-            'content-Types': 'aplication/json'
+            'Accept': 'application/json',
+            'Content-Types': 'aplication/json'
         }
     }
     return headers
@@ -11,9 +15,9 @@ const POST = async (url, payload) => {
     let res = null;
     try {
         res = await axios.post(url, payload, headers());
-        return (res && res.data) || null
+        return (res && res.data) || null;
     } catch (error) {
-        throw (error && error.response.data.error) || errorMessage
+        throw (error && error.response.data.error) || errorMessage;
     }
 };
 
@@ -30,7 +34,7 @@ const PATCH = async (url, payload) => {
 const GET = async (url) => {
     let res = null;
     try {
-        res = await axios.get(url, payload, headers());
+        res = await axios.get(url, headers());
         return (res && res.data) || null
     } catch (error) {
         throw (error && error.response.data.error) || errorMessage
@@ -40,7 +44,7 @@ const GET = async (url) => {
 const DELETE = async (url) => {
     let res = null;
     try {
-        res = await axios.delete(url, payload, headers());
+        res = await axios.delete(url, headers());
         return (res && res.data) || null
     } catch (error) {
         throw (error && error.response.data.error) || errorMessage
@@ -58,4 +62,5 @@ export default {
     GET,
     PATCH,
     DELETE,
+    pokemons:`${BASE_URL}/pokemon`,
 }

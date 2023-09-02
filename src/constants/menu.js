@@ -1,3 +1,4 @@
+
 export const drawerMenu = [
     {
         title: "inicio",
@@ -12,7 +13,7 @@ export const drawerMenu = [
             },
             {
                 title: "fetchList",
-                path: "/fetch-list"
+                path: "/fetchList"
             }
         ]
     }

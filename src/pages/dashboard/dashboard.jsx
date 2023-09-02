@@ -40,7 +40,7 @@ const Dashboard = () => {
                 <Box>
                     <Stack spacing={2} direction="row" sx={{ marginTop: 1 }}>
                         <Link to="/todo" style={{ textDecoration: 'none' }}><Button variant="contained" sx={{ backgroundColor: 'yellow', color: "black" }}><ChecklistIcon /><span style={{ marginLeft: '16px' }}></span>To Do</Button></Link>
-                        <Link to="/fetch-list" style={{ textDecoration: 'none' }}><Button variant="contained" sx={{ backgroundColor: 'yellow', color: "black" }}><ManageSearchIcon /><span style={{ marginLeft: '16px' }}></span>Fetch List</Button></Link>
+                        <Link to="/fetchList" style={{ textDecoration: 'none' }}><Button variant="contained" sx={{ backgroundColor: 'yellow', color: "black" }}><ManageSearchIcon /><span style={{ marginLeft: '16px' }}></span>Fetch List</Button></Link>
                     </Stack>
                 </Box>
                 <Stack sx={{ width: 'auto', display: "flex", flexDirection: "row", marginTop: "10px", justifyContent: "space-between" }}>
